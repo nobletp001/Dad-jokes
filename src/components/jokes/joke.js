@@ -68,7 +68,7 @@ const { votes, text, upvote, downvote } = props;
               margingTop:3
             }}
           >
-            <Card elevation={4}>
+            <Card elevation={4} sx={{width:"100%"}}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 14 }}
