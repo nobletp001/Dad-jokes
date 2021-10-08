@@ -2,6 +2,9 @@ import React,{useCallback} from 'react'
 import { Box, Typography } from "@mui/material";
 import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
 import ArrowDownwardOutlinedIcon from "@mui/icons-material/ArrowDownwardOutlined";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+
 export default function Joke(props) {
 
 const { votes, text, upvote, downvote } = props;
@@ -62,9 +65,22 @@ const { votes, text, upvote, downvote } = props;
             sx={{
               width: { lg: "70%", xs: "80%", sm: "80%" },
               marginLeft: { xs: 3 },
+              margingTop:3
             }}
           >
-            {text}
+            <Card elevation={4}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.primary"
+                  gutterBottom
+                >
+                {text}
+                </Typography>
+                
+              </CardContent>
+            
+            </Card>
           </Box>
           <Box
             sx={{
